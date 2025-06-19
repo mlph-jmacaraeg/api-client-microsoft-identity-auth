@@ -1,0 +1,38 @@
+{
+  "name": "kiota-typescript-client",
+  "version": "1.0.0",
+  "description": "API client for TypeScript with Microsoft identity authentication using Kiota",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "dev": "tsc && node dist/src/index.js",
+    "lint": "eslint src/**/*.ts client/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts client/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts client/**/*.ts",
+    "clean": "rm -rf dist && rm -rf .kiota",
+    "clean:all": "npm run clean && rm -rf node_modules && rm -f package-lock.json"
+  },
+  "keywords": [
+    "kiota",
+    "typescript",
+    "microsoft-graph",
+    "authentication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@microsoft/kiota-bundle": "^1.0.0-preview.95",
+    "@microsoft/kiota-authentication-azure": "^1.0.0-preview.95",
+    "@azure/identity": "^4.0.0"
+  }
+}
